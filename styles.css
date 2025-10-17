@@ -1,0 +1,149 @@
+/*  ======== CONFIGURACIÓN GLOBAL ======== */
+
+/* 
+ * El selector universal (*) aplica a todos los elementos.
+ * "box-sizing: border-box" hace que el padding y border se incluyan 
+ * dentro del ancho y alto total del elemento, facilitando el control del layout.
+ */
+* {
+  box-sizing: border-box;
+}
+
+/* 
+ * Estilo base del cuerpo de la página.
+ * - Fuente moderna del sistema (fallbacks si alguna no está disponible)
+ * - Quita el margen por defecto del navegador
+ * - Define color de fondo claro y texto oscuro
+ */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  background: #f6f7fb;
+  color: #222;
+}
+
+/*  ======== ENCABEZADO Y PIE DE PÁGINA ======== */
+
+/* 
+ * Aplica el mismo estilo a los elementos .site-header y .site-footer
+ * - Fondo oscuro (#0f172a)
+ * - Texto blanco
+ * - Espaciado interno (padding)
+ */
+.site-header,
+.site-footer {
+  background: #0f172a;
+  color: #fff;
+  padding: 12px 16px;
+}
+
+/* 
+ * Estilos para los enlaces dentro del nav del header
+ * - Color gris claro
+ * - Separación horizontal entre los enlaces
+ * - Sin subrayado
+ */
+.site-header nav a {
+  color: #cbd5e1;
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+/*  ======== CONTENEDOR PRINCIPAL ======== */
+
+/* 
+ * Define un contenedor centrado con ancho máximo 
+ * y margen superior/inferior para separar del header/footer.
+ * "auto" centra horizontalmente el contenido.
+ */
+.container {
+  max-width: 920px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/*  ======== TARJETAS (SECCIONES) ======== */
+
+/* 
+ * Clase "card" usada en secciones o formularios.
+ * - Fondo blanco
+ * - Borde sutil y esquinas redondeadas
+ * - Sombra ligera para dar sensación de elevación
+ */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/*  ======== ETIQUETAS Y CAMPOS DE FORMULARIO ======== */
+
+/* 
+ * Hace que cada etiqueta (label) ocupe toda la línea 
+ * y tenga espacio inferior para separar los campos.
+ */
+label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* 
+ * Los campos input ocupan todo el ancho disponible
+ * con padding interno, borde gris claro y esquinas suaves.
+ */
+input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+/*  ======== BOTONES GENERALES ======== */
+
+/* 
+ * Botón con padding moderado, esquinas redondeadas y cursor tipo mano.
+ * Sin borde por defecto (border: 0).
+ */
+button {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 
+ * Efecto hover (al pasar el ratón): 
+ * reduce ligeramente la opacidad para un efecto visual sutil.
+ */
+button:hover {
+  opacity: 0.9;
+}
+
+/*  ======== BOTÓN DE CERRAR SESIÓN ======== */
+
+/* 
+ * Estilo especial para el botón de "Cerrar sesión".
+ * - Fondo gris azulado oscuro (#334155)
+ * - Texto blanco
+ * - Sin borde
+ * - Padding y bordes redondeados
+ * - Cursor tipo mano
+ */
+.logout-btn {
+  background: #334155;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 
+ * Efecto hover del botón de logout:
+ * cambia el fondo a un tono más claro (#475569).
+ */
+.logout-btn:hover {
+  background: #475569;
+}
