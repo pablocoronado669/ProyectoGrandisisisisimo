@@ -1,0 +1,9 @@
+-- Crear tabla de usuarios para la app
+CREATE TABLE IF NOT EXISTS usuarios_app (
+  id INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(80) NOT NULL,
+  email VARCHAR(120) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  creado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
